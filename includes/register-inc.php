@@ -1,5 +1,15 @@
 <?php
 
+// include_once 'dbh-inc.php';
+// $sql = 'SELECT MAX(user_id) FROM log_in_details';
+// $temp = mysqli_query($connection, $sql);
+// $var = mysqli_fetch_assoc($temp);
+// echo $var['MAX(user_id)'];
+// die;
+
+// SET @var = (SELECT MAX(`user_id`) FROM `log_in_details`);
+// UPDATE `log_in_details` SET `user_id` = @val+1 WHERE `user_id`=0
+
 if (isset($_POST['submit'])) {
  	
 	include_once 'dbh-inc.php';
@@ -13,6 +23,9 @@ if (isset($_POST['submit'])) {
 		header("Location: ../register.php?signup=empty");
 		exit();
 	} else {
+		//Check if input charachters are valid
+		//if(!preg_match("/^[a-zA-Z]*$", $firstName)) ## not name in registration form ##
+
 		//Check if email is valid
 		if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 			header("Location: ../register.php?signup=email");
@@ -35,9 +48,17 @@ if (isset($_POST['submit'])) {
 				$type = $_POST['user'];
 
 				//Insert the user into the database
-				$sql = "INSERT INTO log_in_details (email_id, user_type, password, status) VALUES ('$email', '$type' ,'$password', 1);";
+				$sql = "INSERT INTO log_in_details (email_id, user_type, password, status) VALUES ('$email', '$type' ,'$password', 1);";				
 				mysqli_query($connection, $sql);
+
+				// echo "done!";die;
 				
+				//Updating the user_id of the user
+				$sql = "SET @var=(SELECT MAX(`user_id`) FROM `log_in_details`);
+						UPDATE `log_in_details` SET `user_id`=@var+1 WHERE `user_id`=0;";
+				//echo $sql;die;
+				mysqli_multi_query($connection, $sql);
+
 				header("Location: ../index.php?register=success");
 				exit();
 			}

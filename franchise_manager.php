@@ -1,50 +1,8 @@
 <?php
 	include_once 'header.php';
+	include_once 'franchise-navbar.php';
 ?>
-	    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
-	        <ul class="nav navbar-nav">
-				<li class="dropdown">
-		            <a href="feedback_fm.html"><i class="fa fa-pencil"></i><span>Feedback</span></a>
-		        </li>
-                <!-- <li class="dropdown">
-		            <a href="certification.html"><i class="fa fa-certificate"></i><span>Certification</span></a>
-		        </li> -->
-		        <li class="dropdown">
-					<a href="fm/courses.php"><i class="fa fa-list"></i><span>Courses</span></a>
-				</li>
-				<li class="dropdown">
-		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><span>My Profile</span></a>
-		        	   <ul class="dropdown-menu">
-						<li><a href="courses.html">Reports</a></li>
-			            <li><a href="courses.html">Payment Details</a></li>
-						<li><a href="courses.html">Exams</a></li>
-						<li><a href="courses.html">Fee Records</a></li>
-			            <li><a href="courses.html">Settings</a></li>
-			            
-			            <?php
-							if (isset($_SESSION['id'])) {
-		                        echo '  <li>
-		                        			<a>
-		                                    <form action="includes/logout-inc.php" method="POST">
-		                                        <button type="submit" name="submit">Logout</button>
-		                                    </form>
-		                                	</a>
-		                                </li>';
-		                    } else {
-		                        header("Location: index.php");
-		                        exit();
-		                    }
-	                    ?>
-			            
-			            <!-- <li><a href="login.php">Log Out</a></li> -->
-		              </ul>
-		        </li>
-			</ul>
-	    </div>
-	    <div class="clearfix"> </div>
-	  </div>
-	    <!--/.navbar-collapse-->
-</nav>
+
 <nav class="navbar nav_bottom" role="navigation">
  <div class="container">
   <!-- Brand and toggle get grouped for better mobile display -->

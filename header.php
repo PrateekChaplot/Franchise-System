@@ -1,6 +1,19 @@
 <?php 
     session_start();
+
+    function log_out() {
+        session_start();
+        session_unset();
+        session_destroy();
+        header("Location: index.php?index=loggedout");
+        exit();
+    }
+
+    if(isset($_GET['hello'])) {
+        log_out();
+    }
 ?>
+
 <!DOCTYPE HTML>
 <html>
 <head>

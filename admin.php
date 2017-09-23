@@ -19,13 +19,7 @@
 			            
 			            <?php
 							if (isset($_SESSION['id'])) {
-		                        echo '  <li>
-		                        			<a>
-		                                    <form action="includes/logout-inc.php" method="POST">
-		                                        <button type="submit" name="submit">Logout</button>
-		                                    </form>
-		                                	</a>
-		                                </li>';
+		                        echo '<li><a href="franchise_manager.php?hello=true">Log Out</a></li>';
 		                    } else {
 		                        header("Location: index.php");
 		                        exit();
