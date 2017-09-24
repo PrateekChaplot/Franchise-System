@@ -44,18 +44,48 @@
 
 <div class="courses_box1">
    <div class="container">
-   	  <form class="login" action="..." method="POST">
+   	  <form action="includes/fm-chane-inc.php" method="POST">
         <p class="lead">Account Settings</p>
+        
+        <!-- First Name -->
         <div class="form-group">
-            <input type="text" name="email" autocomplete="off" class="required form-control" placeholder="Email *" value="">
+            Name:	<?php
+            			require 'includes/dbh-inc.php';
+
+            			$sql = "SELECT `first_name` FROM `franchisee_manager` WHERE `user_id`='".$_SESSION['id']."'";
+            			$temp = mysqli_query($connection, $sql);
+            			$row = $temp->fetch_assoc();
+            			echo $row['first_name'];
+            			?>
+            <input type="text" name="new-fname" autocomplete="off" placeholder="First Name *" value="">
         </div>
+        
+        <!-- Last Name -->
         <div class="form-group">
-            <input type="password" name="password" class="required form-control" placeholder="Password *" value="">
+        	Last Name: <?php
+	            			require 'includes/dbh-inc.php';
+
+	            			$sql = "SELECT `last_name` FROM `franchisee_manager` WHERE `user_id`='".$_SESSION['id']."'";
+	            			$temp = mysqli_query($connection, $sql);
+	            			$row = $temp->fetch_assoc();
+	            			echo $row['last_name'];
+	            			?>
+            <input type="text" name="new-lname" placeholder="Last Name *" value="">
         </div>
+        
+        <!-- Phone Number -->
         <div class="form-group">
-            <button type="submit" name="submit" class="btn btn-primary btn-lg1 btn-block">Sign Up</button>
+            Phone Number:	<?php
+		            			require 'includes/dbh-inc.php';
+
+		            			$sql = "SELECT `phone_number` FROM `franchisee_manager` WHERE `user_id`='".$_SESSION['id']."'";
+		            			$temp = mysqli_query($connection, $sql);
+		            			$row = $temp->fetch_assoc();
+		            			echo $row['phone_number'];
+		            			?>
+            <input type="tel" name="new-phone" placeholder="Phone Number *" value="">
         </div>
-        <p>Already have an account? <a href="login.html">Sign In</a></p>
+        <button type="submit" name="submit">Apply Changes!</button>
         </form>
    </div>
 </div>
