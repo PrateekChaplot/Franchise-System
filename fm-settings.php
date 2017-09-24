@@ -28,6 +28,37 @@
    </div>
 </nav>
 
+<!-- banner -->
+<div class="courses_banner">
+	<div class="container">
+		<h3>Settings</h3>
+		<div class="breadcrumb1"><br><br>
+	        <ul>
+	            <li class="icon6"><a href="franchise_manager.php">&nbsp; &nbsp; Franchise Manager</a></li>
+	            <li class="current-page">Settings</li>
+	        </ul>
+    	</div>
+	</div>
+</div>
+<!-- //banner -->
+
+<div class="courses_box1">
+   <div class="container">
+   	  <form class="login" action="..." method="POST">
+        <p class="lead">Account Settings</p>
+        <div class="form-group">
+            <input type="text" name="email" autocomplete="off" class="required form-control" placeholder="Email *" value="">
+        </div>
+        <div class="form-group">
+            <input type="password" name="password" class="required form-control" placeholder="Password *" value="">
+        </div>
+        <div class="form-group">
+            <button type="submit" name="submit" class="btn btn-primary btn-lg1 btn-block">Sign Up</button>
+        </div>
+        <p>Already have an account? <a href="login.html">Sign In</a></p>
+        </form>
+   </div>
+</div>
 <!-- end of body -->
 
 <!-- footer -->
