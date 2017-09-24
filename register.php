@@ -90,70 +90,8 @@
             </form>
 	   </div>
 	</div>
-    <div class="footer">
-    	<div class="container">
-    		<div class="col-md-3 grid_4">
-    		   <h3>About Us</h3>	
-    		   <p>"We provide a platform where franchises and students can register. Franchises can provide a detailed structure of courses they are offering and students can manage their study material,payemnt details and many more things of crucial importance here ."</p>
-    		</div>
-    		<div class="col-md-3 grid_4">
-    		   <h3>Quick Links</h3>
-    			<ul class="footer_list">
-    				<strong><li><a href="courses.html">-Courses </a></li>
-    				<li><a href="batches.html">-Batches</a></li>
-			        <li><a href="recent.html">-Upcoming Events </a></li></strong>
-    		    </ul>
-    		</div>
-    		<div class="col-md-3 grid_4">
-    		   <h3>Contact Us</h3>
-    			<address>
-                    <Strong>Address</strong>
-					<p>"Plot T, Bhamas(RIICO) Industrial Area, Kaladwas, Udaipur, Rajasthan 313003"</p>
-                    <br>
-                    <abbr>Contact : 8949731742</abbr> 
-                    <br>
-                    <abbr>Email : </abbr> <a href="#">prateek@malinator.com</a>
-               </address>
-    		</div>
-    		<div class="col-md-3 grid_4">
-    		   <h3>Working Hours</h3>
-    			 <table class="table_working_hours">
-		        	<tbody>
-		        		<tr class="opened_1">
-							<td class="day_label">monday</td>
-							<td class="day_value">9:30 am - 6.00 pm</td>
-						</tr>
-					    <tr class="opened">
-							<td class="day_label">tuesday</td>
-							<td class="day_value">9:30 am - 6.00 pm</td>
-						</tr>
-					    <tr class="opened">
-							<td class="day_label">wednesday</td>
-							<td class="day_value">9:30 am - 6.00 pm</td>
-						</tr>
-					    <tr class="opened">
-							<td class="day_label">thursday</td>
-							<td class="day_value">9:30 am - 6.00 pm</td>
-						</tr>
-					    <tr class="opened">
-							<td class="day_label">friday</td>
-							<td class="day_value">9:30 am - 3.00 pm</td>
-						</tr>
-					    <tr class="closed">
-							<td class="day_label">saturday</td>
-							<td class="day_value closed"><span>Closed</span></td>
-						</tr>
-					    <tr class="closed">
-							<td class="day_label">sunday</td>
-							<td class="day_value closed"><span>Closed</span></td>
-						</tr>
-				    </tbody>
-				</table>
-            </div>
-    		<div class="clearfix"> </div>
-        </div>
-    </div>
-<script src="js/jquery.countdown.js"></script>
-<script src="js/script.js"></script>
-</body>
-</html>	
+    
+<!-- footer -->
+<?php 
+    include_once 'footer.php';
+?>
