@@ -18,7 +18,7 @@
     <!--Collect the nav links, forms, and other content for toggling--> 
     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
         <ul class="nav navbar-nav nav_1">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="index.php">Home</a></li>
             <li><a href="about.html">About</a></li>
     		<li><a href="services.html">Services</a></li>
             <li class="last"><a href="contact.html">Contacts</a></li>
@@ -36,7 +36,7 @@
         </p>
         <div class="breadcrumb1">
             <ul>
-                <li class="icon6"><a href="index.html">Home</a></li>
+                <li class="icon6"><a href="index.php">Home</a></li>
                 <li class="current-page">Courses</li>
             </ul>
         </div>
