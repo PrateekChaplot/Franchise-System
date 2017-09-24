@@ -15,10 +15,10 @@
 				<li class="dropdown">
 		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><span>My Profile</span></a>
 		        	   <ul class="dropdown-menu">
-						<li><a href="courses.html">Reports</a></li>
-			            <li><a href="courses.html">Payment Details</a></li>
+						<!-- <li><a href="courses.html">Reports</a></li> -->
+			            <!-- <li><a href="courses.html">Payment Details</a></li> -->
 						<li><a href="courses.html">Exams</a></li>
-						<li><a href="courses.html">Fee Records</a></li>
+						<!-- <li><a href="courses.html">Fee Records</a></li> -->
 			            <li><a href="courses.html">Settings</a></li>
 			            
 			            <?php
