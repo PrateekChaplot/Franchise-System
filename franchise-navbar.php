@@ -19,7 +19,7 @@
 			            <!-- <li><a href="courses.html">Payment Details</a></li> -->
 						<li><a href="courses.html">Exams</a></li>
 						<!-- <li><a href="courses.html">Fee Records</a></li> -->
-			            <li><a href="courses.html">Settings</a></li>
+			            <li><a href="fm-settings.php">Settings</a></li>
 			            
 			            <?php
 							if (isset($_SESSION['id'])) {
