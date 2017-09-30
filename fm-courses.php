@@ -61,11 +61,7 @@
                     $sql = "SELECT `franchisee_id` FROM `franchisee_manager` WHERE `user_id`='".$_SESSION['id']."'";
                     $temp = mysqli_query($connection, $sql);
                     $row = $temp->fetch_assoc();
-                    // print_r($temp);
-                    // echo '<br>';
-                    // print_r($row);
-                    // echo '<br>';
-
+                    
                     $sql = "SELECT `course_id` FROM `franchisee_payment_details` WHERE `franchisee_id`='".$row['franchisee_id']."'";
                     
                     if($result = mysqli_query($connection, $sql)) {
@@ -77,13 +73,7 @@
                                 $sql = "SELECT * FROM `course_details` WHERE `course_id`='".$row->course_id."'";
                                 $temp = mysqli_query($connection, $sql);
                                 $var = $temp->fetch_object();
-                                // print_r($temp);
-                                // echo '<br>';
-                                // print_r($var);
                                 
-                                // echo $var->course_id, '<br>', $var->course_name, '<br>', $var->course_duration, '<br>', $var->course_fee, '<br>';
-                                // echo $row->course_id, '<br>';
-
                                 echo '
                                     <li class="clearfix">
                                         <div class="id_col">'.$var->course_id.'</div>
@@ -96,129 +86,14 @@
                         }
                     }
                 ?>
-                <!--
-                    <li class="clearfix">
-    					<div class="id_col"></div>
-
-        				<div class="name_col"><a href="course_detail.html"></a></div>
-
-        				<div class="duration_col"></div>
-
-        				<div class="fee_col"></div>
-    				</li>
-					
-    				
-                    <li class="clearfix">
-    					<div class="id_col">TA - 002</div>
-
-        				<div class="name_col"><a href="course_detail.html">Tax Compliance</a></div>
-
-        				<div class="duration_col">20 weeks</div>
-
-        				<div class="fee_col">Mon, Dec 14 - 2015</div>
-    				</li>
-    				<li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-    				 <li class="clearfix">
-    					<div class="id_col">PA - 001</div>
-
-        				<div class="name_col"><a href="course_detail.html">Pre & Primary Teachers Training</a></div>
-
-        				<div class="duration_col">9 Months</div>
-
-        				<div class="fee_col">Fri, Dec 25 - 2015</div>
-    				</li>
-                -->
+                
     		</ul>   
 				
 		</div>
 		    <div class="clearfix"> </div>
 		
 </div>
-<!--
-</div><br><br>&nbsp;
-<i class="fa fa-heart" aria-hidden="true" style="font-size:20px;color:#FFF;"></i>
-</div>
--->
+
 <?php 
     include_once 'footer.php';
 ?>

@@ -83,7 +83,13 @@
 		            			$row = $temp->fetch_assoc();
 		            			echo $row['phone_number'];
 		            			?>
-            <input type="tel" name="new-phone" placeholder="Phone Number *" value="">
+            <input type="number" name="new-phone" placeholder="Phone Number *" value="">
+        </div>
+        <div class="form-group">
+            New Password: <input type="password" name="new-pwd" placeholder="New Password *">
+        </div>
+        <div class="form-group">
+            Old Password: <input type="password" name="old-pwd" placeholder="Old Password *">
         </div>
         <button type="submit" name="submit">Apply Changes!</button>
         </form>

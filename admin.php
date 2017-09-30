@@ -1,32 +1,65 @@
-<?php 
-	include_once 'header.php';
+<?php
+	require 'dbconfig/config.php';
 ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Learn an Education Category Flat Bootstarp Resposive Website | Admin </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Learn Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<link href="css/bootstrap-3.1.1.min.css" rel='stylesheet' type='text/css' />
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- Custom Theme files -->
+<link href="css/style.css" rel='stylesheet' type='text/css' />
+<link rel="stylesheet" href="css/jquery.countdown.css" />
+<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
+<!----font-Awesome----->
+<link href="css/font-awesome.css" rel="stylesheet"> 
+<!----font-Awesome----->
+<script>
+$(document).ready(function(){
+    $(".dropdown").hover(            
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideDown("fast");
+            $(this).toggleClass('open');        
+        },
+        function() {
+            $('.dropdown-menu', this).stop( true, true ).slideUp("fast");
+            $(this).toggleClass('open');       
+        }
+    );
+});
+</script>
+</head>
+<body>
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+	    <div class="navbar-header">
+	        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+	        </button>
+	         <a class="navbar-brand" href="index.html">Learn</a>
+	    </div>
+	    <!--/.navbar-header-->
 	    <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: 1px;">
 	        <ul class="nav navbar-nav">
 				<li class="dropdown">
-					<a href="course_detail.html"><i class="fa fa-list"></i><span>Courses</span></a>
+					<a href="course.php"><i class="fa fa-list"></i><span>Courses</span></a>
 				</li>
 				<li class="dropdown">
 		        	<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i><span>User id</span></a>
 		        	   <ul class="dropdown-menu">
-						<li><a href="courses.html">Add Courses</a></li>
-			            <li><a href="courses.html">Reports</a></li>
-			            <li><a href="courses.html">Provide Certificate</a></li>
-						<li><a href="courses.html">Exams</a></li>
-						<li><a href="courses.html">Fee structure</a></li>
-			            <li><a href="courses.html">Payment Details</a></li>
-						<li><a href="courses.html">Settings</a></li>
-			            
-			            <?php
-							if (isset($_SESSION['id'])) {
-		                        echo '<li><a href="franchise_manager.php?hello=true">Log Out</a></li>';
-		                    } else {
-		                        header("Location: index.php");
-		                        exit();
-		                    }
-	                    ?>
-			            
-			            <!-- <li><a href="login.php">Log Out</a></li> -->
+		        	   	<li><a href="add.php">Add Courses</a></li>
+		        	    <li><a href="settings_admin.php">Settings</a></li>
+			            <li><a href="index.php">Log Out</a></li>
 		              </ul>
 		        </li>
 			</ul>
@@ -49,10 +82,9 @@
     <div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
         <ul class="nav navbar-nav nav_1">
             <li><a href="index.php">Home</a></li>
-            <li><a href="">Admissions Approval</a></li>
-    		<li><a href="About.html">About</a></li> 
-            <li><a href="services.html">Services</a></li>
-            <li class="last"><a href="contact.html">Contacts</a></li>
+            <li><a href="about.php">About</a></li> 
+            <li><a href="services.php">Services</a></li>
+            <li class="last"><a href="contact.php">Contacts</a></li>
         </ul>
       </div><!-- /.navbar-collapse -->
    </div>
@@ -61,7 +93,7 @@
 	<div class="container">
 		<div class="banner-info">
 			<h3>Welcome!</h3><br><br>
-		    <a href="farnchise_detail.html"><i class="fa fa-thumbs-up icon_1" style="font-size: 10px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 10px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View Details</a>
+		    <a href="courses.php"><i class="fa fa-thumbs-up icon_1" style="font-size: 10px; transition: color 0.2s ease 0s, border-color 0.2s ease 0s, background-color 0.2s ease 0s; min-height: 0px; min-width: 0px; line-height: 10px; border-width: 0px 2px 0px 0px; margin: 0px; padding:0px 10px 0 0; letter-spacing: 0px;"></i>View Details</a>
 		</div>
 	</div>
 </div>
@@ -113,20 +145,12 @@
     		<div class="col-md-3 grid_4">
     		   <h3>About Us</h3>	
     		   <p>"We provide a platform where franchises and students can register. Franchises can provide a detailed structure of courses they are offering and students can manage their study material,payemnt details and many more things of crucial importance here ."</p>
-    		      <!--<ul class="social-nav icons_2 clearfix">
-                    <li><a href="#" class="twitter"><i class="fa fa-twitter"></i></a></li>
-                    <li><a href="#" class="facebook"> <i class="fa fa-facebook"></i></a></li>
-                    <li><a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a></li>
-                 </ul>-->
+    		      
     		</div>
     		<div class="col-md-3 grid_4">
     		   <h3>Quick Links</h3>
     			<ul class="footer_list">
-    				<strong><li><a href="#">-  Courses </a></li>
-    				<li><a href="#">-  Admission Form</a></li>
-    				<li><a href="#">-  Batches</a></li>
-    				<li><a href="#">-  Upcoming Events </a></li></strong>
-    				<!--<li><a href="#">-   NEW CLASSROOM TECHNOLOGY</a></li>-->
+    				<strong><li><a href="courses.php">-  Courses </a></li>
     			</ul>
     		</div>
     		<div class="col-md-3 grid_4">
@@ -141,7 +165,7 @@
                     <br>
                     <abbr>Contact : </abbr> 
                     <br>
-                    <abbr>Email : </abbr> <a href="mailto@example.com">info(at)Learn.com</a>
+                    <abbr>Email : </abbr> <a href="mailnator@example.com">info(at)Learn.com</a>
                </address>
     		</div>
     		<div class="col-md-3 grid_4">
