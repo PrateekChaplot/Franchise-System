@@ -1,7 +1,7 @@
 # Franchise-System
 Adynor Group Project
 
-## Contributers :
-- Prateek Chaplot ([@prateekchaplot](https://github.com/prateekchaplot))
-- Juhi Chhabra
-- Aayushi Gupta
+## Developed by:
+* Aayushi Gupta
+* Juhi Chhabra
+* [Prateek Chaplot](https://github.com/prateekchaplot)
